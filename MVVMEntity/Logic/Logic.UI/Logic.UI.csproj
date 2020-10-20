@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectTypeGuids>{416D63FD-0477-49AA-A954-A7C5B95A9B51};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{0272FB10-2E36-453D-B527-D9B8887C615F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Logic.UI</RootNamespace>
+    <AssemblyName>Logic.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonServiceLocator, Version=2.0.5.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CommonServiceLocator.2.0.5\lib\net47\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.4.1.0, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.4.1.0, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.4.1.0, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmLightLibs.5.4.1.1\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.Analytics.Interfaces" />
+    <Reference Include="Microsoft.Analytics.Interfaces.Streaming" />
+    <Reference Include="Microsoft.Analytics.Types" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Address.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AddressType.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BillOfMaterials.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessEntity.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessEntityAddress.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessEntityContact.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContactType.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CountryRegion.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CountryRegionCurrency.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CreditCard.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Culture.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Currency.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CurrencyRate.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBHelper.cs" />
+    <Compile Include="EmailAddress.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Illustration.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Location.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MainViewModel.cs" />
+    <Compile Include="Password.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonCreditCard.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonPhone.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneNumberType.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCategory.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCostHistory.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDescription.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDocument.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductInventory.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductListPriceHistory.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductModel.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductModelIllustration.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductModelProductDescriptionCulture.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductPhoto.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductProductPhoto.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductReview.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductSubcategory.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductVendor.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseOrderDetail.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseOrderHeader.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesOrderDetail.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesOrderHeader.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesOrderHeaderSalesReason.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesPerson.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesPersonQuotaHistory.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesReason.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesTaxRate.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesTerritory.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesTerritoryHistory.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ScrapReason.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShipMethod.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingCartItem.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialOffer.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialOfferProduct.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StateProvince.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Store.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Testdb.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Testdb.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Testdb.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Testdb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Testdb.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionHistory.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionHistoryArchive.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UnitMeasure.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModelLocator.cs" />
+    <Compile Include="WorkOrder.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WorkOrderRouting.cs">
+      <DependentUpon>Testdb.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <EntityDeploy Include="Testdb.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Testdb.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Testdb.edmx.diagram">
+      <DependentUpon>Testdb.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Testdb.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Testdb.edmx</DependentUpon>
+      <LastGenOutput>Testdb.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Testdb.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Testdb.edmx</DependentUpon>
+      <LastGenOutput>Testdb.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
